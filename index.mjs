@@ -1,5 +1,6 @@
 import http from 'http';
 import httpProxy from 'http-proxy';
+import HttpsProxyAgent from 'https-proxy-agent';
 import url from 'url';
 import nodeStatic from 'node-static';
 
@@ -40,7 +41,7 @@ const server = http.createServer((req, res) => {
     proxy.web(req, res, {
       target: targetUrl,
       changeOrigin: true,
-      agent: new (require('https-proxy-agent'))(proxyUrl),
+      agent: new HttpsProxyAgent(proxyUrl),
       headers: {
         host: url.parse(targetUrl).host
       }
