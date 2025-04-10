@@ -1,0 +1,16 @@
+{
+  "name": "utopia-rotating-proy",
+  "version": "1.0.0",
+  "description": "Proy with rotating IP support",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "dependencies": {
+    "http-proxy": "^1.18.1",
+    "https-proxy-agent": "^7.0.2",
+    "node-static": "^0.7.11"
+  }
+}
+
